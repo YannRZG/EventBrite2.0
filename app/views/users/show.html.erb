@@ -1,0 +1,23 @@
+<h1>Users#show</h1>
+<p>Find me in app/views/users/show.html.erb</p>
+
+<!-- app/views/users/show.html.erb -->
+
+<h1>Profil de <%= @user.first_name %> <%= @user.last_name %></h1>
+
+<p>Prénom : <%= @user.first_name %></p>
+<p>Nom de famille : <%= @user.last_name %></p>
+<p>Description : <%= @user.description %></p>
+<p>E-mail : <%= @user.email %></p>
+
+<h2>Événements créés par <%= @user.first_name %></h2>
+<ul>
+  <% @user.events.each do |event| %>
+    <li><%= link_to event.title, event_path(@event) %></li>
+  <% end %>
+</ul>
+
+<% if current_user == @user %>
+  <p><%= link_to "Éditer l'e-mail", edit_user_registration_path %></p>
+  <p><%= link_to "Éditer le mot de passe", edit_user_registration_path %></p>
+<% end %>

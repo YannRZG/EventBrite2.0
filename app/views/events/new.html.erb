@@ -1,0 +1,49 @@
+<h1>Créer un nouvel événement</h1>
+
+<div class="contact-box p-4 bg-primary">
+    <%= form_with(model: @event, url: events_path, method: :post) do |form| %>
+        <div class="row">                    
+            <div class="col-lg-6">
+                <%= form.hidden_field :admin_id, value: current_user.id %>
+                <div class="form-group mt-3">
+                    <%= form.text_field :title, class: "form-control", placeholder: "Titre" %>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group mt-3">
+                    <%= form.time_field :start_date, class: "form-control", placeholder: "Date de début" %>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group mt-3">
+                    <%= form.number_field :duration, class: "form-control", placeholder: "Durée (en minutes)" %>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="form-group mt-3">
+                    <%= form.text_area :description, class: "form-control", placeholder: "Description" %>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group mt-3">
+                    <%= form.text_field :location, class: "form-control", placeholder: "Lieu" %>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group mt-3">
+                    <%= form.number_field :price, class: "form-control", placeholder: "Prix" %>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <%= form.submit "Créer l'événement", class: "btn btn-danger mt-3 mb-3 text-white border-0 py-2 px-3" %>
+            </div>
+        </div>
+    <% end %>
+</div>
+
+<% if @event && @event.errors.any? %>
+    <p>Nous n'avons pas réussi à créer l'événement pour la (ou les) raison(s) suivante(s) :</p>
+    <% @event.errors.full_messages.each do |message| %>
+        <p class="alert alert-danger" role="alert"><%= message %></p>
+    <% end %>
+<% end %>

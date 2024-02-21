@@ -1,0 +1,29 @@
+
+<div class="col-md-4">
+  <div class="card box-shadow mx-auto my-5" style="width: 18rem;">
+    <div class="card-body">
+      <!-- Titre de l'événement -->
+      <h5 class="card-title"><%= @event.title %></h5>
+      <hr>
+      <!-- Auteur de l'événement -->
+      <% if @event.admin %>
+        <p class="card-text">Par : <%= @event.admin.first_name %> (<%= @event.admin.email %>)</p>
+      <% else %>
+        <p class="card-text">Par : Anonyme</p>
+      <% end %>
+      <!-- Contenu de l'événement -->
+      <p class="card-text"><%= @event.description %></p>
+      <!-- Nombre d'inscrits à l'événement -->
+      <p class="card-text">Nombre d'inscrits : <%= @event.users.count %></p>
+      <!-- Date de début de l'événement -->
+      <p class="card-text">Date de début : <%= @event.start_date %></p>
+      <!-- Date de fin de l'événement -->
+      <p class="card-text">Date de fin : <%= @event.end_date %></p>
+      <!-- Lieu de l'événement -->
+      <p class="card-text">Lieu : <%= @event.location %></p>
+      <!-- Prix de l'événement -->
+      <p class="card-text">Prix : <%= number_to_currency(@event.price) %></p>
+    </div>
+  </div>
+</div>
+      

@@ -1,0 +1,45 @@
+<!-- Jumbotron -->
+<div class="p-5 text-center bg-image rounded-3" style="
+    background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.webp');
+    height: 400px;
+  ">
+  <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+    <div class="d-flex justify-content-center align-items-center h-100">
+      <div class="text-white">
+        <h1 class="mb-3">Heading</h1>
+        <h4 class="mb-3">Subheading</h4>
+        <a class="btn btn-outline-light btn-lg" href="<%= new_event_path %>" role="button">Créer un event</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Jumbotron -->
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <% @events.sort_by{|e| - e.id}.each do |event| %>
+      <div class="col-md-4">
+        <!-- Début de l'élément avec les vagues et l'icône -->
+        <div class="card box-shadow mx-auto my-5" style="width: 18rem;">
+          <!-- Image aléatoire -->
+          
+          <div class="card-body">
+            <!-- Titre du gossip -->
+            <h5 class="card-title"><%= event.title %></h5>
+            <hr>
+            <!-- Auteur du gossip -->
+            <% if event.admin %>
+              <p class="card-text">Par : <%= event.admin.first_name %></p>
+            <% else %>
+              <p class="card-text">Par : Anonyme</p>
+            <% end %>
+            <!-- Contenu du gossip -->
+            <p class="card-text"><%= event.description %></p>
+            <!-- Bouton Voir plus -->
+            <%= link_to "Voir plus", event_path(event), class: "btn btn-primary" %>
+          </div>
+        </div>
+        <!-- Fin de l'élément avec les vagues et l'icône -->
+      </div>
+    <% end %>
+  </div>
+</div>

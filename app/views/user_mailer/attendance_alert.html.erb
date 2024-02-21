@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Nouvelle participation à votre événement</h1>
+    <p>
+      Bonjour <%= @admin.full_name %>,
+    </p>
+    <p>
+      <%= @user.full_name %> vient de rejoindre votre événement : <%= @event.title %> !
+    </p>
+    <p>
+      Pour plus de détails, veuillez consulter votre événement.
+    </p>
+    <p> Cordialement,
+    </p>
+    <p> Votre équipe de gestion des événements
+    </p>
+  </body>
+</html>
