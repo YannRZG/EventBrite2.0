@@ -11,13 +11,17 @@
 <p>E-mail : <%= @user.email %></p>
 
 <h2>Événements créés par <%= @user.first_name %></h2>
-<ul>
-  <% @user.events.each do |event| %>
-    <li><%= link_to event.title, event_path(@event) %></li>
-  <% end %>
-</ul>
+
+<% @events.each do |event| %>
+    <% if event.admin == @user %>
+    <%= button_to event.title, event_path(event) %>
+    
+    <% end %>
+<% end %>
 
 <% if current_user == @user %>
   <p><%= link_to "Éditer l'e-mail", edit_user_registration_path %></p>
   <p><%= link_to "Éditer le mot de passe", edit_user_registration_path %></p>
 <% end %>
+
+

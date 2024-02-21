@@ -3,6 +3,12 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
-    @events = @user.events
+    @events = Event.all
+  end
+
+private
+
+  def user_params
+    params.require(:user).permit(:email, :description, :first_name, :last_name, :encrypted_password)
   end
 end
