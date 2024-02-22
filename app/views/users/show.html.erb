@@ -1,8 +1,9 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+
 
 <!-- app/views/users/show.html.erb -->
-
+<div class="col-md-4">
+  <div class="card box-shadow mx-auto my-5" style="width: 18rem;">
+    <div class="card-body">
 <h1>Profil de <%= @user.first_name %> <%= @user.last_name %></h1>
 
 <p>Prénom : <%= @user.first_name %></p>
@@ -23,5 +24,6 @@
   <p><%= link_to "Éditer l'e-mail", edit_user_registration_path %></p>
   <p><%= link_to "Éditer le mot de passe", edit_user_registration_path %></p>
 <% end %>
-
-
+    </div>
+</div>
+</div>

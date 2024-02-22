@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   get 'users/show'
   resources :static_pages
-  resources :events, only: [:index, :new, :create, :show]
+  resources :events, only: [:index, :new, :create, :show] do
+    post 'register', on: :member
+  end
+  
   devise_for :users, controllers: {
     sessions: 'users/sessions'
   }

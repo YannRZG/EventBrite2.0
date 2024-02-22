@@ -23,6 +23,8 @@
       <p class="card-text">Lieu : <%= @event.location %></p>
       <!-- Prix de l'événement -->
       <p class="card-text">Prix : <%= number_to_currency(@event.price) %></p>
+
+      <%= button_to "S'inscrire à l'Event", checkout_create_path(total: @event.price, event_id: @event.id), class: "btn btn-primary", method: :post, remote: true %>
     </div>
   </div>
 </div>
