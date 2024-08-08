@@ -1,0 +1,78 @@
+{
+    "resources": [
+        {
+            "title": "Bienvenue à THP !",
+            "content": "Bon ok, ch'suis dans la rue chez nous J'voyais rien, je fesse dans une rafale de 6 pieds R'gardez mon pick-up Ch'peux pu avancer Ch't'à peu près à 500 mètres de chez nous Checkez-moi ça la rafale Checkez mon pick-up, j'ai fessé là-d'dans, ça a arrêté ben sec, j'm'suis fessé la face dans l'steering Tabarnak de câlisse de ciboire La la, ça a pas d'allure"
+        },
+        {
+            "title": "Introduction à JavaScript",
+            "content": "JavaScript est un langage de programmation qui permet de créer du contenu dynamique sur des sites web. Il est utilisé pour tout, des simples interactions utilisateur aux applications web complexes."
+        },
+        {
+            "title": "Guide de React",
+            "content": "React est une bibliothèque JavaScript pour construire des interfaces utilisateur. Elle permet de créer des composants réutilisables et de gérer l'état de l'application de manière efficace."
+        },
+        {
+            "title": "Apprendre Node.js",
+            "content": "Node.js est un environnement d'exécution JavaScript côté serveur. Il permet de créer des applications web rapides et évolutives en utilisant JavaScript sur le serveur."
+        },
+        {
+            "title": "Introduction à CSS",
+            "content": "CSS (Cascading Style Sheets) est un langage de style utilisé pour décrire la présentation d'un document écrit en HTML ou XML. Il permet de contrôler la mise en page, les couleurs, les polices, et bien plus encore."
+        }
+    ],
+    "users": [
+        {
+            "nom": "Scherer",
+            "prenom": "Alexia",
+            "email": "Scherer.alexia@example.com",
+            "ville": "Cambrousse (Lyon)"
+        },
+        {
+            "nom": "Marcarini",
+            "prenom": "Raphael",
+            "email": "Marcarini.bebou@example.com",
+            "ville": "Osny sisi wesh"
+        },
+        {
+            "nom": "Hernandez",
+            "prenom": "Cleopatre",
+            "email": "Hernandez.cleopatre@example.com",
+            "ville": "Lyon"
+        },
+        {
+            "nom": "Hernandez",
+            "prenom": "Cleopatre",
+            "email": "Hernandez.cleopatre@example.com",
+            "ville": "Lyon"
+        }
+    ],
+    "missions": [
+        {
+            "title": "Mission 1",
+            "content": "Description de la mission 1."
+        },
+        {
+            "title": "Mission 2",
+            "content": "Description de la mission 2."
+        },
+        {
+            "title": "Mission 3",
+            "content": "Description de la mission 3."
+        },
+        {
+            "title": "Mission 4",
+            "content": "Description de la mission 4."
+        }
+    ],
+    "projects": [
+        {
+            "title": "Projet A",
+            "content": "Détails du projet A."
+        },
+        {
+            "title": "Projet B",
+            "content": "Détails du projet B."
+        }
+    ]
+}
